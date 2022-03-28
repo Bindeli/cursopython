@@ -25,7 +25,8 @@ print('Peso:', peso, 'Kg')
 print('É maior de idade?', e_maior)
 print('==============')
 
-print(nome, 'tem', idade, 'anos de idade, e o  seu imc é de:', int(imc))
+# print(nome, 'tem', idade, 'anos de idade, e o  seu imc é de:', int(imc))
+print(f'{nome} tem {idade} anos de idade, e seu imc é de {imc:.2f}')
 print('==============')
 
 # Crie um código onde exiba uma pergunta sobre a idade do usuário.
