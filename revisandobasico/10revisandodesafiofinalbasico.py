@@ -47,12 +47,61 @@ else:
 
 se o novo cpf, for diferente do original, ele é inválido
 """
+while True:
+    cpf = input('Digite seu cpf: ')
+    if not len(cpf) == 11:
+        print('Digite um cpf válido com 11 caracteres')
+        print('')
+        continue
 
+    novo_cpf = cpf[:-2]
 
+    print(novo_cpf)
 
+    contador_1 = 10
+    contador_2 = 11
+    soma_1 = 0
+    total_1 = 0
+    soma_2 = 0
+    total_2 = 0
+    digitofinal = 0
 
+    for elemento in range(9):
+        soma_1 = int(novo_cpf[elemento]) * contador_1
+        contador_1 -= 1
+        total_1 = soma_1 + total_1
 
+    digitofinal = 11 - (total_1 % 11)
 
+    if digitofinal > 9:
+        digitofinal = 0
 
+    print(f'Total 1 : {total_1}')
+    print(f'Digito final 1 : {digitofinal}')
 
+    novo_cpf = novo_cpf + str(digitofinal)
+    print(f'Novo cpf por enquanto : {novo_cpf}')
 
+    for elemento in range(10):
+        soma_2 = int(novo_cpf[elemento]) * contador_2
+        contador_2 -= 1
+        total_2 = soma_2 + total_2
+
+    print(f'Total 2 : {total_2}')
+    digitofinal = 11 - (total_2 % 11)
+
+    if digitofinal > 9:
+        digitofinal = 0
+
+    print(f'Segundo Digito: {digitofinal}')
+    novo_cpf = novo_cpf + str(digitofinal)
+    print(f'Novo cpf : {novo_cpf}')
+
+    #evitar sequencias:
+    sequencia = novo_cpf == str(novo_cpf[0]) * len(cpf)
+
+    if novo_cpf == cpf and not sequencia:
+        print(f'O cpf {novo_cpf} é válido')
+    else:
+        print(f'O cpf {novo_cpf} é inválido')
+    print('')
