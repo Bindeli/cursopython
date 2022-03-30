@@ -15,7 +15,7 @@ def funcao(var):
 variavel = funcao('Valor que eu quero!')
 # ela irá me retornar None
 print(variavel)
-# none representar um não-valor, nada, utilizado para falar que uma vaiavel não tem um valor.
+# none representar um não-valor, nada, utilizado para falar que uma variavel não tem um valor.
 # retornar um valor boolean False
 print('')
 print('Utilizando a função com return')
