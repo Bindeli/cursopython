@@ -53,8 +53,65 @@ def fun_kw(*args,**kwargs):
 
 fun_kw(1,2,9,7,5,8, nome='Lucas',sobrenome='Bindeli')
 
+"""
+Não conseguimos alterar valores de uma variável global através de uma variável local em uma função
+"""
+print('\nNão conseguimos alterar o vlaor de uma variavel global dentro de uma função')
+variavel_global = 'valor'
 
+def fun_naltera():
+    # chamando a função global pela função, posso pegar o valor dela
+    print(variavel_global)
+fun_naltera()
+print('\nPorém podemos induzir um valor que será recebido somente na função')
+def fun_alt():
+    variavel_global = 'valor somente na função'
+    print(variavel_global)
 
+fun_alt()
 
+print('O valor alterado na função, não irá seu escopo global\n')
+print('Não é uma boa prática, mas podemos alterar utilizando a função global')
+print('Desta maneira:\n')
+def func_altglobal():
+    #chamamos a função global, e depois a variável
+    global variavel_global
+    variavel_global = 'Um novo valor!'
+    print(variavel_global)
+
+func_altglobal()
+print(f'A variável agora tem um novo valor: {variavel_global}\n')
+print('Não é uma boa prática, o correto seria utilizar o return ou argumentos')
+print('\nUtilizando o replace e mudando o valor da variavel')
+
+def fun_replace(var):
+    # replace é utilizado para trocar caracteres
+    # primeiro a letra que será alterada e depois pelo que será trocado
+    var = var.replace('v','@')
+    return var
+
+outra_variavel = fun_replace('variavel exemplo')
+
+print(outra_variavel)
+print('')
+
+"""
+Também não podemos chamar uma variável que está dentro de uma função para dentro de uma outra função
+
+pois a outra variável está dentro do escopo local da primeira função e ele só funciona dentro dessa função
+
+Para resolver isso, poemos fazer deste jeito : utilizando return, e jogar para uma variável
+
+"""
+
+def primeirafunc():
+    variavel_func = 'valor da variavel da primeira função'
+    return variavel_func
+
+def segunda_func(arg):
+    print(arg)
+
+variavel_p = primeirafunc()
+segunda_func(variavel_p)
 
 
