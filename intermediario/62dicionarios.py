@@ -259,7 +259,6 @@ lista = [
     ['Chave3', 3],
     ['Chave4', 4],
 ]
-
 dicio_lst = dict(lista)
 print(dicio_lst)
 # Isso vai funcionar com listas, com tuplas dentro de listas também
@@ -270,11 +269,9 @@ lista2 = [
     ('Chave3', 3),
     ('Chave4', 4),
 ]
-
 dicio_tpl = dict(lista2)
 print(dicio_tpl)
 # Também funciona com tuplas que possui tuplas dentro dela, ou tuplas com listas dentro dela
-
 # Aqui no dicionário também temos a função pop e popitem igual de listas
 # porém é diferente das listas
 print(' ')
