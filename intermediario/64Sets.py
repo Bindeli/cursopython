@@ -45,11 +45,11 @@ set_n = set()
 set_n.add(1) # um valor inteiro
 set_n.add(3) # um outro valor inteiro
 set_n.add(('Uma','tupla',7,8)) # uma tupla
-set_n.add(8.5) # um valor inteiro
+set_n.add(8.5) # um valor float
 
 print(f'Imprimindo o set_n : {set_n}')
 # Caso eu queira remover um elemento do Set:
-# Utilizando a """função""" discard e colocamos qual elemento queremos remover
+# Utilizando a função ""discard"" e colocamos qual elemento queremos remover
 set_n.discard(3) # Aqui irei remover o elemento 3 do Set
 print('')
 print('Após ter removido o elemento 3 utilizando discard: ')
@@ -102,7 +102,7 @@ print(' ')
 # Difference - elementos apenas no set da esquerda, sinal = -
 set_dif1 = {1,2,3,4,5,6,8,9,10}
 set_dif2 = {0,2,4,6,8,10,11}
-set_dif_do_1 = set_dif1 - set_dif2 # Aqui quero ver apenas elemetnos unicos do primeiro
+set_dif_do_1 = set_dif1 - set_dif2 # Aqui quero ver apenas elementos unicos do primeiro
 set_dif_do_2 = set_dif2 - set_dif1 # Aqui quero ver apenas elementos unicos do segundo
 print(f'Utilizando difference para o primeiro : {set_dif_do_1}')
 print(f'Utilizando difference para o segundo : {set_dif_do_2}')
@@ -120,7 +120,7 @@ print(' ')
 print('Duas listas:')
 lista_1 = ['Lucas','João', 'Maria']
 print(lista_1)
-lista_2 = ['João','Lucas', 'Maria','Maria' ,'Lucas','Lucas','Lucas']
+lista_2 = ['João','Lucas', 'Maria','Maria','Lucas','Lucas','Lucas']
 print(lista_2)
 print(f'Verificando se as duas listas são iguais : {lista_1==lista_2}')
 # são diferentes
@@ -145,3 +145,29 @@ else:
 
 print(lista_if1)
 print(lista_if2)
+
+print(f'\nResumindo tudo: ')
+
+meu_set = {1, 2, 3, 4, 1}
+meu_set_2 = set([1, 2, 8, 9, 10])
+
+# União
+print("União")
+print(meu_set | meu_set_2)
+print(meu_set.union(meu_set_2))
+
+# Interseção
+print("Interseção")
+print(meu_set & meu_set_2)
+print(meu_set.intersection(meu_set_2))
+
+# Diferença
+print("Diferença")
+print(meu_set - meu_set_2)
+print(meu_set.difference(meu_set_2))
+
+# Diferença Simétrica
+print("Diferença Simétrica")
+print(meu_set ^ meu_set_2)
+print(meu_set.symmetric_difference(meu_set_2))
+
