@@ -9,7 +9,7 @@ lista_l1 = [1,2,3,4,5,6,7,8,9]
 # e agora eu vou iterar sobre cada elemento da lista l1 com uma linha de código só
 lista_l2 = [valor for valor in lista_l1]
 # quero jogar cada elemento dessa lista l1 para a lista l2
-# Estou cada elemento para a variável valor e criando uma nova lista
+# Estou enviando cada elemento para a variável valor e criando uma nova lista
 print(f'Lista 1 : {lista_l1}')
 print(f'Lista 2 : {lista_l2}')
 
@@ -34,8 +34,8 @@ print('')
 lista_nome = ['Lucas', 'André','Anildson','Marcelo']
 # replace para modificar o caracter 'a' pelo @
 # upper para deixar tudo maiúsculo
-lista_relace = [valor.replace('a','@').upper() for valor in lista_nome]
-print(f'Lista com nomes modificados a por @: {lista_relace}')
+lista_replace = [valor.upper().replace('A','@') for valor in lista_nome]
+print(f'Lista com nomes modificados a por @: {lista_replace}')
 
 # Próximo exemplo
 # Suponha que há uma tupla
