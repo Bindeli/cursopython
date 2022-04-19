@@ -28,6 +28,16 @@ print('Essa é uma "String" (str)') # ou print("Essa é uma 'string' (str)")
 print(r'Este é meu \n texto') # o \n utilizado de forma normal, salta uma linha
 #porém não é legal de forma estética também. o ideal é começar com aspas simples e colocar no meio aspas duplas
 
+lista_simples_inteiro = [1, 2, 3, 8, 14, 4, 5]
 
+print(lista_simples_inteiro)
+
+# Append()
+lista_simples_inteiro.append(6)
+print(lista_simples_inteiro)
+
+# Insert()
+lista_simples_inteiro.insert(2, 100)
+print(lista_simples_inteiro)
 
 

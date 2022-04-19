@@ -14,17 +14,11 @@ retorno final = 0123456789.0123456789.0123456789.0123456789.0123456789.012345678
 string = '012345678901234567890123456789012345678901234567890123456789'
 print(f'String inicial : {string}')
 
-# string_lista = [ letra for letra in string ]
-# print(string_lista)
-# print(string[0:10])
-n = 10
-string_list = [string[i:i + n] for i in range(0, len(string), n) ]
-print(string_list)
+#print(string[0:10])
+sequencia = 10
 
-string_final = '.'.join(string_list)
+string_lista = [ string[i : i+ sequencia] for i in range(0 , len(string), sequencia) ]
 
-print(f'{string_final}')
-
-
-
-
+print(string_lista)
+string_final = '.'.join(string_lista)
+print(string_final)
