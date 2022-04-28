@@ -33,6 +33,7 @@ lista_3 = lista_1+lista_2 # junção da lista 1 com a lista 2
 print(f'Lista 3: {lista_3}')
 # para uma lista receber valores de uma outra lista sem alterar a outra lista, utilizamos """extend"""
 # a primeira lista irá receber elementos da segunda
+
 lista_4 = [7,8,9]
 lista_4.extend(lista_2)
 print(f'Lista 4 com extend (com a lista 2): {lista_4}')
@@ -83,3 +84,6 @@ for valor in lista_7:
     print(f'Valor : {valor}')
     soma_lista7 += valor
 print(f'A soma de todos os elementos da Lista 7 é : {soma_lista7}')
+print(f'lista FINAL : {lista_2}')
+del lista_2[0:2]
+print(f'Depois do del : {lista_2}')

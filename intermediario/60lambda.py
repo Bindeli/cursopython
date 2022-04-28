@@ -22,6 +22,7 @@ print(f'Resultado : {var}')
 
 a = lambda x, y: x * y # Essa expressão é a mesma coisa que a função acima
 print(f'Resultado : {a(2,2)}')
+
 # ambos terão o mesmo resultado
 print(' ')
 # a utilidade é quando você precisa passar uma função por parâmetro para outra função ou para algum método de outra classe
@@ -50,13 +51,18 @@ def func_s(item): # função que recebe um item
 # Utilizamos a função """sort""" para organizar ordenadamente
 # sendo key a chave de qual modo será organizado, no exemplo, será pelo função
 # parâmetro key que especifica uma função a ser chamada para cada elemento da lista antes de ser realizada a comparação
+
 lista.sort(key=func_s)
+
 # por isso criamos a função que irá receber um item e retornando um item com a chave escolhida
 # caso eu queira inverter, ficaria deste jeito :
 # lista.sort(key=func_s, reverse=True)
+
 print(f'Lista ordenada: {lista}')
 print(' ')
+
 # Tive que criar uma função só para ordenar, porém as expressões lambda podem ajudar de maneira mais simples
+
 print('Utilizando lambda:')
 lista_copia = [
     ['Produto1', 11],
