@@ -14,7 +14,7 @@ import itertools
 lista_a = [10, 2, 3, 40, 5, 6, 7]
 lista_b = [1, 2, 3, 4]
 
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # 1° método de como realizar :
 
 # lista_soma = []
@@ -22,19 +22,19 @@ lista_b = [1, 2, 3, 4]
 #     lista_soma.append(lista_a[i] + lista_b[i])
 # print(f'Lista soma : {lista_soma}')
 
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # 2° método de como realizar :
 
 # lista_soma = [ x + y for x,y in zip(lista_a,lista_b)]
 # print(f'Lista soma: {lista_soma}')
 
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # Método de como realizei :
 
 lista_somaAB = []
 
-for num1, num2 in zip(lista_a,lista_b):
-  lista_somaAB.append(num1+num2)
+for num1, num2 in zip(lista_a, lista_b):
+    lista_somaAB.append(num1 + num2)
 
 print(f'Primeira lista : {lista_a}')
 print(f'Segunda lista : {lista_b}')
@@ -57,7 +57,7 @@ Uma outra possibilidade é usar zip_longest para capturar os valores da lista ma
 A ideia é a mesma, veja:
 
 from itertools import zip_longest
- 
+
 lista_a = [10, 2, 3, 4, 5]
 lista_b = [12, 2, 3, 6, 50, 60, 70]
 lista_soma = [x + y for x, y in zip_longest(lista_a, lista_b, fillvalue=0)]
@@ -65,5 +65,6 @@ print(lista_soma)  # [22, 4, 6, 10, 55, 60, 70]
 Neste caso, usamos o "fillvalue" como 0 (zero), assim conseguimos capturar os 
 valores restantes da lista maior, realizando contas, sem obter um erro em nosso programa.
 """
+
 
 
