@@ -17,6 +17,8 @@ print(f'Novo dicionário : {dicionario}')
 # iremos ver o valor da chave 1
 print(f"Valor da chave 1 : {dicionario['chave1']}")
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 # Um outro jeito de criar dicionários:
 
 dicionario2 = dict(chave_1='Valor da chave', chave_2='Valor da segunda chave')
@@ -46,6 +48,8 @@ dicionario_ch = {
 }
 print(f'Dicionário: {dicionario_ch}')
 print( f'Acessando a chave (1,2,3,4) : {dicionario_ch[(1,2,3,4)]}' )
+
+#----------------------------------------------------------------------------------------------------------------
 # Caso eu chame uma chave que não existe, irá dar erro no código e não irá ler o que tem abaixo do código
 # Para contornar este problema, há duas maneiras:
 # Com if:
@@ -56,14 +60,18 @@ if 'naoexiste' in dicionario_ch:
 else:
     print(f'Não existe essa chave.!')
 # ou posso fazer ao contrário, caso não esteja no dicionario, podemos criar também
+
+#----------------------------------------------------------------------------------------------------------------
 print(f' O dicionário não possui a chave : {dicionario_ch}')
 print(' ')
 print('Agora irá verificar se não está e adicionar se não encontrar:')
 if 'naoexiste' not in dicionario_ch:
     dicionario_ch['naoexistia'] = 'valor da chave que não existia'
     print(dicionario_ch)
-print(' ')
-print('Utilizando get:')
+
+
+#----------------------------------------------------------------------------------------------------------------
+print('\nUtilizando get:')
 # Também podemos utilizar o get para obter o conteúdo da chave.
 # Não causa erro caso a chave não exista.
 # caso não exista, irá aparecer apenas 'None' e o código não irá parar por causa de erro
@@ -75,6 +83,7 @@ if dicionario_ch.get('nomedachave') is not None: # mas não irá executar pois n
 if dicionario_ch.get(123) is not None:
     print(dicionario_ch.get(123))
 
+#----------------------------------------------------------------------------------------------------------------
 # Caso eu queira atualizar o valor da chave, eu posso utilizar o nome da chave que já existe no dicionario
 # e irei atualizar o valor dela
 print(' ')
@@ -83,6 +92,8 @@ dicionario_ch['str'] = 'Valor Alterado'
 print(dicionario_ch)
 print(' ')
 print('Utilizando Update: ')
+
+#----------------------------------------------------------------------------------------------------------------
 # Função Update : esta função recebe um dicionário, utilizado para adicionar elementos para um dicionário também
 # também pode ser utilizada para unir dois dicionários fazendo um receber elementos do outro
 # Exemplo : dicionário1.update(dicionario2)
@@ -99,15 +110,22 @@ print(dicionario_ch)
 print(' ')
 
 print(f"Verificando se ainda possui str no dicionario: {'str' in dicionario_ch}")
+
+#----------------------------------------------------------------------------------------------------------------
 # E também tem uma função para a chaves mas é a mesma coisa do que isso aqui : {'str' in dicionario_ch}
 print(f"Verificando str de outra maneira : {'str' in dicionario_ch.keys()}")
+
+#----------------------------------------------------------------------------------------------------------------
 # Acessando os valores sem utilizar a chave:
 print(f"Verificando se possui o valor 'Novo Valor': {'Novo Valor' in dicionario_ch.values()}")
 
+#----------------------------------------------------------------------------------------------------------------
 # Podemos utilizar também len, para dizer quantos pares têm no dicionário
 print(' ')
 print(f'Utilizando o len no dicionário: {len(dicionario_ch)}')
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 # Também podemos fazer iteração com dicionários:
 novo_dicionario = {
     'chave_1' : 'valor_1',
@@ -121,11 +139,13 @@ print('Como padrão irá mostrar as chaves: ')
 for elemento in novo_dicionario:
     print(elemento)
 # porém deste modo, estaremos acessando apenas as chaves
+
+#----------------------------------------------------------------------------------------------------------------
 # para mostrar os valores, será necessário utilizar o values()
 print('Agora com values, irá mostrar os valores das chaves: ')
 for valores in novo_dicionario.values():
     print(valores)
-
+#----------------------------------------------------------------------------------------------------------------
 # Para ver as chaves e os itens podemos utilizar a função items
 # Função items : para retornar o valor junto com sua chave, fazemos deste jeito :
 print(' ')
@@ -141,6 +161,8 @@ print('Outro método para acessar chave e o valor, é desempacotar.')
 for k, v in dicionario_ch.items():
     print(k, v)
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 # Criando um dicionário maior :
 # adicionando dicionário dentro de dicionário
 print('Criando um dicionário grande com outro dicionário dentro dele:')
@@ -159,6 +181,8 @@ clientes = {
         'Sobrenome': 'Santos',
     },
 }
+
+#----------------------------------------------------------------------------------------------------------------
 # Para iterar o dicionário :
 for clientes_k, clientes_v in clientes.items(): # este for é responsável pelo loop inteiro do dicionário
     print(f'Exibindo {clientes_k}')
@@ -167,6 +191,8 @@ for clientes_k, clientes_v in clientes.items(): # este for é responsável pelo 
     for dados_k, dados_v in clientes_v.items():
         print(f'\t {dados_k}: {dados_v}') # utilizando o \t para ficar identado, que fica o espaço de 1 Tab
 
+
+#----------------------------------------------------------------------------------------------------------------
 # Outro Exemplo de dicionário mais complicado!
 print(' ')
 dados_dic = {1: 'a', 2: 'b', 3: 'c'}
@@ -183,11 +209,15 @@ print('Um valor foi alterado no segundo dicionário, mas também será alterado 
 print(f'Dados Dic: {dados_dic}')
 print(f'Dados Alt: {dados_alt}')
 
+
+#----------------------------------------------------------------------------------------------------------------
 # Quando você utiliza o sinal de igual = , você não está criando um novo objeto
 # Esses dois objetos são idênticos
 print(f'Verificando se os dois são idênticos: {dados_alt==dados_dic}')
 print('Ambos apontam para a mesma localização na memória de seu computador!')
 # se você alterar um, o outro será alterado
+
+#----------------------------------------------------------------------------------------------------------------
 # Caso eu queria criar uma ""shell"" ou cópia do seu dicionário
 # Para contornar isso, utilizamos o """copy"""
 print('Utilizando a função copy: ')
@@ -201,19 +231,27 @@ print(f'Dicionário Cópia : {dados_sh}')
 # Isso é uma cópia rasa, os valores não foram copiados para o dicionário dados_sh
 # Os valores de dados_sh são uma referência em dados_sh
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 d1 = {1: 'a', 2: 'b', 3: 'c', 4 : ['Lucas','Nil','Andre']}
 print('Acessando a chave 4 e seu indice 0 dentro de sua lista')
 print(d1[4][0]) # Estou querendo ver o valor da chave 4 , e dentro da lista, o indice 0
 d1_alt = d1.copy()
 d1_alt[1] = 'Luiz'
+
+#----------------------------------------------------------------------------------------------------------------
 # Tentando alterar o valor dentro da lista da chave 4
 d1_alt[4][0] = 'João'
 print('Tentei alterar um elemento dentro da lista da chave 4 : ')
 print(f'Dicionário Original: {d1}')
 print(f'Dicionário cópia: {d1_alt}')
+
+#----------------------------------------------------------------------------------------------------------------
 # Os dois sofrem alterações na lista
 # A lista é mutável, pode ser alterada, e por ser uma cópia rasa, sofre alteração em ambas
 # poderia contornar isso criando objetos imutáveis, como tuplas
+
+#----------------------------------------------------------------------------------------------------------------
 """
 Para criar uma cópia verdadeira do dicionário utilizamos o import copy
 
@@ -231,6 +269,8 @@ E Neste momento ambos os dicionários são independentes, o valor de um não afe
 
 """
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 print('Utilizando o import copy')
 import copy
 
@@ -251,6 +291,8 @@ Ou tupla com tuple
 
 """
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 print('Convertendo uma lista em um dicionário:')
 # eu posso converter em um dicionário pois eu tenho um par
 lista = [
@@ -262,6 +304,8 @@ lista = [
 dicio_lst = dict(lista)
 print(dicio_lst)
 # Isso vai funcionar com listas, com tuplas dentro de listas também
+
+#----------------------------------------------------------------------------------------------------------------
 print('Agora com lista que contém tuplas : ')
 lista2 = [
     ('Chave1', 1),
@@ -272,6 +316,8 @@ lista2 = [
 dicio_tpl = dict(lista2)
 print(dicio_tpl)
 # Também funciona com tuplas que possui tuplas dentro dela, ou tuplas com listas dentro dela
+
+#----------------------------------------------------------------------------------------------------------------
 # Aqui no dicionário também temos a função pop e popitem igual de listas
 # porém é diferente das listas
 print(' ')
@@ -288,10 +334,14 @@ dicionario_pop.pop(4)
 # irei eliminar a chave 4 do dicionário
 print(f'Dicionário sem a chave 4 : {dicionario_pop}')
 # com pop eu tenho que falar qual chave eu quero eliminar
+
+#----------------------------------------------------------------------------------------------------------------
 # se eu quiser eliminar o último item independente do que seja, eu utiliza o popitem
 dicionario_pop.popitem()
 print(f'Agora sem o último, utilizando popitem: {dicionario_pop}')
 print(' ')
+
+#----------------------------------------------------------------------------------------------------------------
 # Também posso concatenar dicionários :
 
 print('Concatenando dicionários:')
