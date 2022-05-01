@@ -4,7 +4,7 @@ iteração = for, cada volta que o for dá
 """
 
 palavra_secreta = 'python'
-digitados = ['p','n']
+digitados = ['p','n','d','t','s']
 secreto_temporario = ''
 
 for letra in palavra_secreta:

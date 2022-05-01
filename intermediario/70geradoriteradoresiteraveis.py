@@ -13,18 +13,32 @@ ou vai gastar muito tempo para ser feito
 
 """
 import sys
+"""
+fornece funções e variáveis usadas para manipular diferentes partes do ambiente de tempo de execução do Python.
+Com o módulo sys você pode ,por exemplo, saber qual a plataforma do dispositivo que está rodando o seu código, 
+obter os caminhos de sistema que o interpretador Python utiliza, módulos importados, versão do Python, entre outros.
+"""
+
 
 lista = list(range(10))
 print(f'Lista inicial : {lista}')
 print(f'Tamanho da primeira lista: {sys.getsizeof(lista)}') # quanto de memoria essa lista está consumindo aqui, em bytes
 
-print(f"Verificando se a lista é um iterador: {hasattr(lista, '__next__')}") # passando para ver se a lista é um iterador
-# se tiver next, é um iterador
-# é false, ele é um objeto iterável
-# utilizando o iter para transformar em um iterador
-# print(f'Elemento da lista: {next(lista)}'), se eu colocar agora, vai dar erro
-# tenho que transformar ele em um iterador
+print(f"Verificando se a lista é um iterador: {hasattr(lista, '__next__')}")
+# passando para ver se a lista é um iterador
+
+"""
+se tiver next, é um iterador
+
+é false, ele é um objeto iterável
+
+utilizando o iter para transformar em um iterador
+print(f'Elemento da lista: {next(lista)}'), se eu colocar agora, vai dar erro
+tenho que transformar ele em um iterador
+"""
+
 lista = iter(lista) # utilizando a função iter
+
 print(f"Agora depois de utilizar o iter : {hasattr(lista, '__next__')}")
 # Agora se eu executar o next, irá passar para o próximo elemento
 print(f'Elemento da lista: {next(lista)}')
@@ -57,7 +71,7 @@ g = gera()
 # se eu rodar, vai aparecer cada elemento de cada vez sendo chamado
 # chamamos de lazy avaliation, ou avaliação preguiçosa
 
-# Iterador tem o método Next, que irá passar a cada comando
+print(f'\nIterador tem o método Next, que irá passar a cada comando')
 print(hasattr(g, '__next__'))
 print(next(g)) # cada vez que eu utilizar, vou ver o próximo valor
 print(next(g))
@@ -67,9 +81,9 @@ def gera2():
     # igual o for mas estou fazendo manualmente
     variavel = 'Valor 1'
     yield variavel
-    variavel = 'Valor 1'
+    variavel = 'Valor 2'
     yield variavel
-    variavel = 'Valor 1'
+    variavel = 'Valor 3'
     yield variavel
 
 variavel = gera2()
@@ -103,3 +117,30 @@ pedimos este valor, pedindo a função Next
 ou podemos também o for para iteração
 """
 
+"""
+Se eu quero saber se algo é um gerador 
+
+Suponha que eu queira criar uma variavel que contenha a função zip com dois iteradores
+
+"""
+# from types import GeneratorType
+#
+# # variavel = zip('alo','Alou')
+#
+# #print(list(variavel))
+# # Saida = [('a', 'A'), ('l', 'l'), ('o', 'o')]
+# # print(next(variavel))
+# # print(next(variavel))
+#
+# # print(isinstance(variavel, GeneratorType))
+# # aqui estou perguntando, se "a variavel é um instancia de um gerador ?"
+# # vai dar False, pois ele é um iteravel
+#
+# # Para criar um gerador, podemos utilizar comprehension
+# variavel  = ((x,y) for x,y in zip('alo','alo'))
+#
+# # print(variavel)
+# # saida = <generator object <genexpr> at 0x000001D533569B60>
+# # devo transformar em lista antes
+#
+# print(list(variavel))

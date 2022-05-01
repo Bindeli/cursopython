@@ -5,7 +5,7 @@ Iterável : listas, tuples, str -> sequências
 
 Utilizando next, estou consumindo os valores dele, quando eu consumir, ele não estará mais disponível
 
-já o for, é para repetição e não consome
+
 Exemplo abaixo :
 """
 nome = 'Lucas_Bindeli'
@@ -52,11 +52,16 @@ try:
     print(next(iterador_2))  # 15, seria onde iria dar o erro
 except:
     print(f'Fim')
+
+
 # Como eu utilizei todos os caracteres da string, não há mais nada para iterar
-# se eu ássar um for agora, não irá aparecer nada
+# se eu passar um for agora, não irá aparecer nada
+
+
 print(f'Utilizando o for para puxar elementos do iterador 2 :')
 for elemento in iterador_2:
     print(elemento)
+
 print(f'Não irá aparecer nada, pois todos os elementos foram utilizados')
 print(f'\nAgora chamando apenas alguns elementos com o next')
 nome_2 = 'Lucas'

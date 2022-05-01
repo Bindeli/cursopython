@@ -2,7 +2,7 @@
 Zip - Unindo iteráveis
 Zip_longest - itertools
 
-Esta função retornar uma lista de tuplas!!!!!!!!!!!!!!!!!!
+Essa função retonar um iterador!!!!!!!!!!!!!!!!!!
 Porém ao utilizarmos um print, irá mostrar que ela aponta para um objeto instanciado
 Exemplo :
 zip(x, y)
