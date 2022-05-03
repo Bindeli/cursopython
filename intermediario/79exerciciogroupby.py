@@ -28,6 +28,12 @@ idade.sort(key=idade_key)
 
 idade_agrupada = groupby(idade, idade_key)
 
+count = 0
+
+def agrupe():
+
+    ...
+
 for agrupamento, valores_agrupados in idade_agrupada:
 
     print(f'\nIdade : {agrupamento}')
