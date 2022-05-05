@@ -99,7 +99,7 @@ eu utilizei as duas copias do iterador , lista_1 e lista_2
 
 """
 
-print('\nAgora sem utilizar tee: ')
+# print('\nAgora sem utilizar tee: ')
 
 
 # Sem tee (com list)
