@@ -1,0 +1,172 @@
+# """
+# Crie um dicionário d e coloque nele seus dados: nome, idade, telefone, endereço.
+# Usando o dicionário, imprima os dados de usuário
+# """
+
+# dicionario_nomes = {
+#   'Cliente_1' : {
+#     'Nome' : 'Lucas',
+#     'Idade' : '25',
+#     'Telefone' : '999984777',
+#     'Cidade' : 'cariacica',
+#   },
+#   'Cliente_2' : {
+#     'Nome' : 'André',
+#     'Idade' : '23',
+#     'Telefone' : '998456371',
+#     'Cidade' : 'vitoria',
+#   },
+#   'Cliente_3' : {
+#     'Nome' : 'João',
+#     'Idade' : '50',
+#     'Telefone': '984756542',
+#     'Cidade' : 'vilavelha',
+#   },
+#   'Cliente_4' : {
+#     'Nome' : 'Laura',
+#     'Idade' : '21',
+#     'Telefone' : '26',
+#     'Cidade' : 'cariacica'
+#   },
+  
+# }
+# count = 0
+# for clientes,valores in dicionario_nomes.items():
+#   print(f'\n{clientes}')
+#   for valores_ind,inf in valores.items():
+#     print(f'{count} : {valores_ind} = {inf.upper()}')
+#     count += 1
+#   count = 0
+
+# 1 - Faça um Programa que leia um vetor de 5 números inteiros e mostre-os.
+
+print('\nExercicio 1:')
+
+lista_1 = list(range(0,5))
+print(lista_1)
+for item in lista_1:
+  print(item)
+
+# 2 - Faça um Programa que leia um vetor de 10 números reais e mostre-os na ordem inversa.
+
+print('\nExercicio 2:')
+lista_2 = list(range(1,11))
+
+for item in lista_2[::-1]:
+  print(item)
+
+# 3 - Faça um Programa que leia 4 notas, mostre as notas e a média na tela.
+print(f'\nExercicio 3:')
+notas_3 = [10,7,6,2]
+cont_3 = 1
+soma_3 = 0
+for element in notas_3:
+  print(f'Nota {cont_3} : {element}')
+  cont_3 += 1
+  soma_3 += element
+
+print(f'Soma Total : {soma_3} e a media {soma_3/len(notas_3)}')
+
+
+"""
+5 - Faça um Programa que leia 20 números inteiros e armazene-os num vetor. Armazene os números pares no vetor PAR e os números IMPARES no vetor impar. Imprima os três vetores.
+"""
+
+print(f'\nExercicio 5: ')
+
+lista_5 = list(range(1,21))
+lista_5par = []
+lista_5impar = []
+
+for elemento in lista_5:
+  if elemento % 2 == 0:
+    lista_5par.append(elemento)
+  else:
+    lista_5impar.append(elemento)
+
+print(f'Lista completa : {lista_5}')
+print(f'\nLista de pares: {lista_5par}')
+print(f'Lista de impares: {lista_5impar}')
+
+"""
+6 - Faça um Programa que peça as quatro notas de 5 alunos, calcule e armazene num vetor a média de cada aluno,imprima o número de alunos com média maior ou igual a 7.0.
+"""
+# print('\nExercicio 6')
+# lista_media6 = []
+# count_6a = 0
+# soma = 0
+# while count_6a < 5:
+#   print(f'\nAluno {count_6a + 1}')
+#   countb = 0
+#   nota1 = int(input('Digite a nota 1: '))
+#   nota2 = int(input('Digite a nota 2: '))  
+#   nota3 = int(input('Digite a nota 3: '))  
+#   nota4 = int(input('Digite a nota 4: '))  
+#   soma = nota1 + nota2 + nota3 + nota4
+#   print(f'Soma: {soma}')
+#   lista_media6.append(soma/4)
+#   print(lista_media6)
+#   count_6a += 1
+
+# total_alunos = 0
+# for elemento in lista_media6:
+#   if elemento >= 7:
+#     total_alunos +=1
+    
+# print(f'Alunos acima da media : {total_alunos}')
+
+# 7 - Faça um Programa que leia um vetor de 5 números inteiros, mostre a soma, a multiplicação e os números.
+print('\nExercicio 7:')
+
+lista_7 = list(range(1,6))
+soma_total = 0
+mult_total = 1
+
+for item in lista_7:
+  soma_total += item
+  mult_total *= item
+  print(f'Soma por etapas : {soma_total}')
+  print(f'Multiplicação por etapas : {mult_total}')
+
+print(f'\nSoma total : {soma_total}')
+print(f'Multiplicação total : {mult_total}')
+  
+# """
+# 5 - Faça um Programa que leia 20 números inteiros e armazene-os numa lista. Armazene os números pares na lista PAR e os números IMPARES na lista impar. Imprima as três listas.
+
+# Modelo Anildson
+
+# """
+
+# l1 = list(range(1, 21))
+# pares = []
+# impares = []
+
+# for n in l1:
+#   if n % 2 == 0:
+#     pares.append(n)
+#   else:
+#     impares.append(n)
+# print(f'{l1} \n{pares} \n{impares}')
+
+"""
+Tabuada
+"""
+
+# tab = int(input('Digite uma tabuada desejada: ')
+# op = input('Digite operador:')
+
+# while True:
+# tab = int(input('Digite uma tabuada desejada: ')
+# op = input('Digite operador:')
+  
+while True:
+  op = input('Digite S para sair ou um número para calcular:').lower()
+  if op == 's':
+    break
+  else:
+    op = int(op)
+    cont = 1
+    while cont <= 10:
+      print(f'{cont} = {cont * op}')
+      cont += 1
