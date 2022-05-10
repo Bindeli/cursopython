@@ -26,54 +26,15 @@ def converte_numero(valor):
 
 rodar = True
 while rodar:
-    numero = converte_numero(input('Digite um número: '))
-    rodar = input('Digite continuar? ').lower()
+    numero = converte_numero(input('\nDigite um número: '))
 
-    if rodar == 'n' or rodar == 'N':
-        rodar = False
-
-
-    if numero is not None:
-        print(f'{numero} * 5 : {numero * 5}')
-    else:
+    # tenho que verificar desta maneira (if numero is None) pois 0 passa como bolean falso
+    if numero is None:
         print(f'O dígito inserido não é um número')
+    else:
+        print(f'{numero} * 5 = {numero * 5}')
 
-
-
-
-
-
-
+    rodar = input('Digite continuar [s] ou [n]? R: ').lower()
+    if rodar == 'n':
+        rodar = False
 #______________________________________________________________________________________________________________
-
-
-
-
-
-
-
-
-#______________________________________________________________________________________________________________
-
-
-
-
-
-
-
-#______________________________________________________________________________________________________________
-
-
-
-
-
-
-
-
-#______________________________________________________________________________________________________________
-
-
-
-
-
-
