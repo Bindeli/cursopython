@@ -95,6 +95,7 @@ print(f'Importando o PyMySQL, que instalei no terminal: (se não der erro, vai t
 
 print(f'Tentar corrigir depois!!!!!!!!!!!')
 
+
 """
 Para desinstalar é só digitar pip uninstall pymysql
 """
