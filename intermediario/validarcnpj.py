@@ -29,4 +29,40 @@ Válido
 Recap.
 543298765432 -> Primeiro digito
 6543298765432 -> Segunro digito
+
+Vou criar um módulo chamado de cnpj, onde vou criar o código. seria bom em funções
+Como remover ponto, /,
+
+import re    = expressão regular
+
+def removercaractere(cnpj):
+    return re.sub(r'[^0-9]','',cnpj)  , o que não for entre 0 a 9, será substituido por nada ''
+
+removercaracteres('04.252.011/0001-10')
+
+ou
+
+cnpj = cnpj.replace('/','')
+cnpj = cnpj.replace('.','')
+cnpj = cnpj.replace('-','')
+return cnpj
+
+uma outra coisa, é fazer uma função desencadear outras funções
+
+
+
+
 """
+
+
+def valida():
+    fala_oi()
+    falaoutracoisa()
+
+
+def fala_oi():
+    print('Oi')
+
+
+def falaoutracoisa():
+    print('Fala outra coisa')
