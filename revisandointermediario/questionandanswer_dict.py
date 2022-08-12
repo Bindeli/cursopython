@@ -40,16 +40,3 @@ for chave_princ, chave_filha in perguntas.items():
     else:
         print(f'Parabéns! Você errou, a resposta era a opção : {chave_filha["Resposta"].upper()}')
     print('')
-
-
-
-
-
-
-
-
-
-
-
-
-
